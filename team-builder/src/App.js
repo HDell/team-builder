@@ -7,15 +7,17 @@ function App() {
     const [cards, setCards] = useState([
         {
             id: 1,
-            title: "Happy little quote",
-            body: "Talent is a pursued interest. Anything that you're willing to practice, you can do.― Bob Ross "
+            name: "Handell Desulme",
+            email: "handelldesulme51@gmail.com",
+            role: "Computer Science/Web Development Student"
         }
     ]);
     const addNewCard = card => {
         const newCard = {
             id: Date.now(),
-            title: card.title,
-            body: card.body
+            name: card.name,
+            email: card.email,
+            role: card.role
         };
         setCards([...cards, newCard]);
     };

@@ -19,25 +19,33 @@ const CardForm = props => {
     const submitForm = e => {
         e.preventDefault();
         props.addNewCard(card);
-        setCard({ title: "", body: "", role: "" });
+        setCard({ name: "", email: "", role: "" });
     };
 
     return (
         <form onSubmit={submitForm}>
-            <label htmlFor="title">Title</label>
+            <label htmlFor="title">Name</label>
             <input
-                id="title"
+                id="name"
                 type="text"
-                name="title"
+                name="name"
                 onChange={handleChanges}
-                value={card.title}
+                value={card.name}
             />
-            <label htmlFor="card">Card</label>
+            <label htmlFor="email">Email</label>
+            <input
+                id="email"
+                type="email"
+                name="email"
+                onChange={handleChanges}
+                value={card.email}
+            />
+            <label htmlFor="card">Role</label>
             <textarea
-                id="card"
+                id="role"
                 name="body"
                 onChange={handleChanges}
-                value={card.body}
+                value={card.role}
             />
             <button type="submit">Add Card</button>
         </form>
