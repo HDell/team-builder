@@ -24,7 +24,7 @@ const CardForm = props => {
 
     return (
         <form onSubmit={submitForm}>
-            <label htmlFor="title">Name</label>
+            <label htmlFor="name">Name</label>
             <input
                 id="name"
                 type="text"
@@ -40,10 +40,10 @@ const CardForm = props => {
                 onChange={handleChanges}
                 value={card.email}
             />
-            <label htmlFor="card">Role</label>
+            <label htmlFor="role">Role</label>
             <textarea
                 id="role"
-                name="body"
+                name="role"
                 onChange={handleChanges}
                 value={card.role}
             />
