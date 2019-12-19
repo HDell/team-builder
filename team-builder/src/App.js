@@ -24,7 +24,6 @@ function App() {
     return (
         <div className="App">
             <h1>My Team</h1>
-            {/* we are going to pass a function down as a prop */}
             <Form addNewCard={addNewCard} />
             <Cards cards={cards} />
         </div>
